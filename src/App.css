@@ -1,41 +1,83 @@
+/* Applica uno sfondo a tutta la pagina */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+}
+
+/* Container principale centrato e con padding */
 .App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  margin-top: 50px;
-  font-family: Arial, sans-serif;
-}
-
-.upload-form {
-  display: inline-block;
-  text-align: left;
+  color: #333;
   padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
 }
 
+/* Titolo con font artistico e dimensione elevata */
+h1 {
+  font-family: 'Brush Script MT', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+
+/* Form stilizzato con sfondo bianco traslucido e ombreggiatura */
+.upload-form {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+/* Spaziatura tra gli elementi del form */
 .form-group {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
+/* Label in grassetto per migliorare la leggibilità */
 .form-group label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
 }
 
+/* Input con padding e bordi arrotondati, con effetto focus */
 .upload-form input[type="file"],
 .upload-form input[type="email"] {
   width: 100%;
-  padding: 8px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
   box-sizing: border-box;
+  transition: border 0.3s ease;
 }
 
+.upload-form input[type="file"]:focus,
+.upload-form input[type="email"]:focus {
+  border-color: #ff9a9e;
+  outline: none;
+}
+
+/* Bottone con gradiente, arrotondamenti e effetto hover */
 button {
-  padding: 10px 20px;
-  background-color: #007BFF;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
   border: none;
+  border-radius: 6px;
   color: white;
+  font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
 }
 
 button:hover {
-  background-color: #0056b3;
+  transform: translateY(-3px);
+  background: linear-gradient(135deg, #ff857a, #f8a297);
 }
